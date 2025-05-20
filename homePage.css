@@ -10,8 +10,8 @@
   }
 
   body {
-    background: white;
-    color: #083D77;
+    background: WHITE;
+    color: BLACK;
   }
   
   #header {
@@ -47,7 +47,7 @@
   }
   
   nav ul li a {
-    color: #083D77;
+    color: BLACK;
     text-decoration: none;
     font-size: 20px;
     position: relative;
@@ -59,7 +59,7 @@
     content: '';
     width: 0;
     height: 3px;
-    background: #083D77;
+    background: BLACK;
     position: absolute;
     left: 0;
     bottom: -6px;
@@ -81,15 +81,19 @@
   }
   
   .header-text h1 {
-    font-size: 60px;
+    font-family: 'Playfair', sans-serif;
+    font-size: 70px;
+    font-weight: 900;
     margin-top: 20px;
+    color: BLACK;
   }
   
   .header-text h1 span {
+    font-family: 'Playfair', sans-serif;
+    font-weight: 500;
     font-size: 60px;
     margin-top: 20px;
-    background-color: #083D77;
-    color: white;
+    color: BLACK;
   }
   
   /*----------ABOUT ME-----------*/
@@ -115,7 +119,7 @@
   .sub {
     font-size: 60px;
     font-weight: 600;
-    color: #083D77;
+    color: BLACK;
   }
   
   .tabs {
@@ -135,7 +139,7 @@
     content: '';
     width: 0;
     height: 3px;
-    background: #083D77;
+    background: BLACK;
     position: absolute;
     left: 0;
     bottom: -8px;
@@ -152,7 +156,7 @@
   }
   
   .tab-contents ul li span {
-    color: #083D77;
+    color: BLACK;
     font-size: 14px;
   }
   
@@ -163,6 +167,86 @@
   .tab-contents.active-tab {
     display: block;
   }
+  
+  .edu-card {
+    max-width: 350px;
+    margin: 15px 0.005px;
+    background: rgba(255, 254, 254, 0.11);          /* glass effect */
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);       /* subtle soft shadow (neumorphism) */
+    backdrop-filter: blur(6.4px);
+    -webkit-backdrop-filter: blur(6.4px);
+    border-radius: 16px;
+    border: 1px solid rgba(255, 254, 254, 0.3);
+    padding: 10px 14px;
+    display: flex;
+    justify-content: space-between;
+    align-items: left;
+    transition: transform 0.3s ease;
+  }
+  
+  .edu-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 40px rgba(31, 38, 135, 0.25);  /* animated hover effect */
+  }
+  
+  .edu-text h3 {
+    font-family: 'Satoshi', sans-serif;
+    font-size: 10px;
+    color: BLACK;
+    margin-bottom: 5px;
+  }
+  
+  .edu-text p {
+    font-size: 10px;
+    font-family: 'Inter', sans-serif;
+    color: #333;
+    margin: 0;
+  }
+  
+  .edu-logo-box {
+    flex-shrink: 0;
+    margin-left: 20px;
+  }
+  
+  .edu-img {
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+    padding: 4px;
+  }
+  
+  .exp-logo-box {
+    flex-shrink: 0;
+    margin-left: 20px;
+  }
+  
+  .exp-img {
+    height: 60px;
+    width: 60px;
+    border-radius: 20%;
+    object-fit: cover;
+    padding: 4px;
+  }
+  
+  .skill-icons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 12px;
+  }
+  
+  .skill-icons img {
+    height: 30px;
+    width: 30px;
+    object-fit: contain;
+    border-radius: 6px; /* Optional for softer edges */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .skill-icons img:hover {
+    transform: translateY(-3px);
+    }
   
   /*---------------PROJECTS----------------*/
   #projects {
@@ -187,7 +271,7 @@
     border-radius: 16px;
     border: 1px solid rgba(255, 254, 254, 0.3);
     padding: 24px;
-    color: #083D77;
+    color: BLACK;
     transition: all 0.3s ease;
     text-align: center;
   
@@ -215,7 +299,7 @@
   
   .projects-list i {
     font-size: 50px;
-    color: #083D77;
+    color: BLACK;
     display: block;
   }
   
@@ -243,7 +327,7 @@
   .projects-list div a {
     margin-top: 30px;
     padding: 8px 16px;
-    background-color: #083D77;
+    background-color: BLACK;
     color: white;
     border-radius: 8px;
     text-decoration: none;
@@ -277,7 +361,7 @@
  }
 
  .contact-left p i {
-    color:#083D77;
+    color:BLACK;
     margin-right: 15px;
     font-size: 25px;
  }
@@ -290,7 +374,7 @@
     text-decoration: none;
     font-size: 30px;
     margin-right: 15px;
-    color: #083D77;
+    color: BLACK;
     display: inline-block;
     transition: transform 0.5s;
 
@@ -314,7 +398,7 @@
  .CV{
     margin-top: 30px;
     padding: 8px 16px;
-    background-color: #083D77;
+    background-color: BLACK;
     color: white;
     border-radius: 8px;
     text-decoration: none;
@@ -332,7 +416,7 @@
  .submitBtn{
     margin-top: 30px;
     padding: 8px 16px;
-    background-color: #083D77;
+    background-color: BLACK;
     color: white;
     border-radius: 8px;
     text-decoration: none;
@@ -365,7 +449,7 @@ form input, form textarea{
     border: 1px solid rgba(255, 254, 254, 0.3);
     padding: 24px;
     margin: 14px 0;
-    color:#083D77;
+    color:BLACK;
     font-size: 18px;
 }
 
