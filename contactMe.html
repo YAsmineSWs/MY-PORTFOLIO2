@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Contact Me – Yasmine Hachemi</title>
+  <link rel="stylesheet" href="homePage.css">
+  <script src="https://kit.fontawesome.com/5857a933b1.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+  <!-- NAVIGATION BAR -->
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About Me</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="contact.html" class="active">Contact Me</a></li>
+      <li><a href="inProgress.html">My Space</a></li>
+    </ul>
+  </nav>
+
+  <!-- CONTACT SECTION -->
+  <div id="contact">
+    <div class="container">
+      <div class="row">
+
+        <!-- Left Part -->
+        <div class="contact-left">
+          <h1 class="sub">Contact Me</h1>
+          <p><i class="fa-regular fa-envelope"></i> yasminehachemidws@gmail.com</p>
+          <p><i class="fa-solid fa-phone"></i> (514) 839-3470</p>
+          <div class="social-icons">
+            <a href="#" class="instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" class="linkedin"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="#" class="github"><i class="fa-brands fa-github"></i></a>
+          </div>
+
+          <a href="Yasmine_hachemi_FALL25_Resume.pdf" download class="CV">Download CV - English</a><br />
+          <a href="Automne_2025_FR_Yasmine_Hachemi_CV.pdf" download class="CV">Download CV - French</a>
+        </div>
+
+        <!-- Right Part -->
+        <div class="contact-right">
+          <form name="submit-to-google-sheet">
+            <input type="text" name="Name" placeholder="Jane Doe" required>
+            <input type="email" name="Email" placeholder="janedoe@example.com" required>
+            <textarea name="Message" rows="10" placeholder="Your Message" required></textarea>
+            <span id="msg"></span>
+            <button type="submit" class="submitBtn">Submit</button>
+          </form>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="copyright">
+      <p>Copyright &copy; Yasmine Hachemi</p>
+    </div>
+  </div>
+
+  <!-- GOOGLE SHEETS SCRIPT -->
+  <script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbwmDvNXwyYiY80bxM36pR2nBxaFqN2HfVSmWSVjVx3n4EJEAopjvpCJYIgjs8I8nCvo/exec';
+    const form = document.forms['submit-to-google-sheet'];
+    const msg = document.getElementById("msg");
+
+    form.addEventListener('submit', e => {
+      e.preventDefault();
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => {
+          msg.innerHTML = "Message sent successfully!";
+          setTimeout(function(){
+            msg.innerHTML = "";
+          }, 5000);
+          form.reset();
+        })
+        .catch(error => console.error('Error!', error.message));
+    });
+  </script>
+
+</body>
+</html>
