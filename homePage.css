@@ -89,9 +89,9 @@
   }
   
   .header-text h1 span {
-    font-family: 'Playfair', sans-serif;
+    font-family: 'Cedarville Cursive', cursive;
     font-weight: 500;
-    font-size: 60px;
+    font-size: 75px;
     margin-top: 20px;
     color: BLACK;
   }
@@ -250,7 +250,7 @@
   
   /*---------------PROJECTS----------------*/
   #projects {
-    padding: 30px 0;
+    padding: 0px 0;
   }
   
   /* GRID LAYOUT FOR PROJECTS */
@@ -475,11 +475,16 @@ form textarea:hover{
     margin-top: 20px;
 }
 
-#about,
+#about{
+    margin-top: 15px;
+
+}
+
 #projects,
 #contact {
-  margin-top: 200px; 
+  margin-top: 75px; 
 }
+
 
 #msg{
     color:green;
