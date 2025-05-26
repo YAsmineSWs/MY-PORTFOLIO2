@@ -89,9 +89,9 @@
   }
   
   .header-text h1 span {
-    font-family: 'Cedarville Cursive', cursive;
+    font-family: 'Fira Code', monospace;
     font-weight: 500;
-    font-size: 75px;
+    font-size: 50px;
     margin-top: 20px;
     color: BLACK;
   }
@@ -376,10 +376,14 @@
     margin-right: 15px;
     color: BLACK;
     display: inline-block;
-    transition: transform 0.5s;
+    transition: transform 0.5s;}
 
+.fa-regular.fa-envelope:hover {
+  transition: transform 0.5s;
+  transform: translateY(-3px);
+ 
+}
     
- }
  .instagram:hover{
     color: hotpink;
     transform: translateY(-3px);
